@@ -6,7 +6,7 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/jest",
-    "test:ci": "./node_modules/.bin/jest --config ./jest.config.js --collectCoverage --coverageDirectory=\"./coverage\" --ci --reporters=default --reporters=jest-junit --watchAll=false"
+    "test:ci": "./node_modules/.bin/jest --config ./jest.config.ts --collectCoverage --coverageDirectory=\"./coverage\" --ci --reporters=default --reporters=jest-junit --watchAll=false"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",

@@ -4,13 +4,36 @@ cache:
   paths:
     - node_modules/
 
+build:
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    expire_in: 1 days
+    when: on_success
+    paths:
+      - node_modules/
+  script:
+    - yarn install --frozen-lockfile 
+
 test:
-  before_script:
-    - yarn install --frozen-lockfile  
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  needs:
+    - build
+  dependencies:
+    - "build"
+  cache:
+    paths:
+      - coverage/
+  artifacts:
+    paths:
+     - coverage/
+    when: always
+    reports:
+      junit:
+        - junit.xml
+      cobertura: coverage/cobertura-coverage.xml
   script:
     - yarn test-ci
-  artifacts:
-    reports:
-      junit: junit.xml
 
 

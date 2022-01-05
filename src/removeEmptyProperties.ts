@@ -4,11 +4,16 @@
  * 
  * @returns A new object without the empty properties
  */
-const removeEmptyProperties = (object: { key: string, value: any; }): Object =>
+const removeEmptyProperties = (obj: {}): Object =>
   Object.fromEntries(
-    Object.entries(object)
-      .filter(([_, value]) => value !== null)
-      .filter(([_, value]) => (typeof value === "string" ? value.length > 0 : value))
+    Object.entries(obj)
+      .filter(([key, value]) => {
+        if(typeof value === "string"){
+          return value.length > 0;
+        }
+
+        return value !== null;
+      })
       .map(([key, value]) => (typeof value === "object" ? [key, removeEmptyProperties(value)] : [key, value])),
   );
 

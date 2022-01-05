@@ -1,0 +1,16 @@
+image: node:alpine
+
+cache:
+  paths:
+    - node_modules/
+
+test:
+  before_script:
+    - yarn install --frozen-lockfile  
+  script:
+    - yarn test-ci
+  artifacts:
+    reports:
+      junit: junit.xml
+
+

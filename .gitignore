@@ -1,3 +1,15 @@
-./coverage
-./coverage/*
+coverage/
+coverage/base.css
+coverage/block-navigation.js
+coverage/cobertura-coverage.xml
+coverage/coverage-final.json
+coverage/createDownloadLink.ts.html
+coverage/favicon.png
+coverage/index.html
+coverage/prettify.css
+coverage/prettify.js
+coverage/removeEmptyProperties.ts.html
+coverage/sort-arrow-sprite.png
+coverage/sorter.js
+node_modules
 ./node_modules

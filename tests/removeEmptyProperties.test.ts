@@ -1,6 +1,6 @@
 import removeEmptyProperties from "../src/removeEmptyProperties";
 
-test("foo", () => {
+test("it removes the right keys from an object", () => {
   const obj = {
     "name":"Alfonso",
     "surname": "Rossi",

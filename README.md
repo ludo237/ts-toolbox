@@ -7,5 +7,4 @@ A collection of useful agnostic functions that I've created trough time. They ca
 
 ## To Do
 
-- [ ] Add all the tools
 - [ ] Add proper tests

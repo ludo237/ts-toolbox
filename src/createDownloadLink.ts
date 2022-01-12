@@ -2,8 +2,8 @@
  * Create a single ahref on the fly in order to download something or 
  * execute an automatic click event on that newly created anchor tag
  * 
- * @param string href 
- * @param string name 
+ * @param href 
+ * @param name 
  */
 const createDownloadLink = (href: string, name: string, autoremove: boolean = true): void => {
   const link: HTMLAnchorElement = document.createElement("a");
